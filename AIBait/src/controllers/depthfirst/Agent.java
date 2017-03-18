@@ -96,6 +96,7 @@ public class Agent extends AbstractPlayer{
     public Types.ACTIONS act(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
     	if(actList.isEmpty())
     		findPath(stateObs);
+    	//System.out.println(stateObs.getAvatarPosition().toString() + " " + stateObs.getGameWinner().toString());
     	return actList.pollFirst();
     }
 }
